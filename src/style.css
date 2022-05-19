@@ -1,2 +1,18 @@
 body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+body * {
+  border: 0.1px solid red;
+}
+.container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.outerContainer {
+  border: 10px ridge rgb(37, 167, 222);
+  flex: 1;
 }
