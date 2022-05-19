@@ -1,3 +1,6 @@
+import leftSvg from './img/chevron-left.svg';
+import rightSvg from './img/chevron-right.svg';
+
 const domLoader = () => {
   const body = document.querySelector('body');
 
@@ -10,10 +13,22 @@ const domLoader = () => {
   const innerContainer = document.createElement('div');
   innerContainer.setAttribute('class', 'innerContainer');
 
+  const previousArrow = document.createElement('svg');
+  previousArrow.setAttribute('role', 'img');
+  previousArrow.setAttribute('class', 'previous');
+  previousArrow.innerHTML = leftSvg;
+
+  const nextArrow = document.createElement('svg');
+  nextArrow.setAttribute('role', 'img');
+  nextArrow.setAttribute('class', 'next');
+  nextArrow.innerHTML = rightSvg;
+
   // appendings
   outerContainer.appendChild(innerContainer);
   container.appendChild(outerContainer);
 
+  body.appendChild(previousArrow);
+  body.appendChild(nextArrow);
   body.appendChild(container);
 };
 

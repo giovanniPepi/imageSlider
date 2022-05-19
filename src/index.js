@@ -1,4 +1,4 @@
-import style from "./style.css";
-import domLoader from "./domLoader";
+import style from './style.css';
+import domLoader from './domLoader';
 
 domLoader();

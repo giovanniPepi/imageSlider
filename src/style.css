@@ -4,15 +4,38 @@ body {
   flex-direction: column;
   height: 100vh;
 }
-body * {
-  border: 0.1px solid red;
-}
 .container {
   flex: 1;
   display: flex;
   flex-direction: column;
 }
 .outerContainer {
-  border: 10px ridge rgb(37, 167, 222);
+  border: 10px ridge rgb(49, 176, 230);
   flex: 1;
+}
+.previous,
+.next {
+  width: 4rem;
+  height: 4rem;
+  fill: #f54e0e;
+  cursor: pointer;
+  transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.previous {
+  position: absolute;
+  top: 45%;
+  left: 0%;
+}
+.next {
+  position: absolute;
+  right: 0;
+  top: 45%;
+}
+.previous:hover,
+.next:hover {
+  transform: scale(1.1);
+}
+.previous:active,
+.next:active {
+  fill: #e9ae96;
 }
