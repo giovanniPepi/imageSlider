@@ -3,14 +3,17 @@
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
+  "prettier": {
+    "singleQuote": true,
+    "semi": true,
+    "trailingComma": "es5"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js",
-    "watch": "webpack --watch",
     "start": "webpack serve --open",
+    "watch": "webpack --watch",
     "server": "node server.js",
-    "build": "webpack" 
-
+    "build": "webpack"
   },
   "repository": {
     "type": "git",
@@ -25,6 +28,9 @@
   "homepage": "https://github.com/giovanniPepi/imageSlider#readme",
   "devDependencies": {
     "css-loader": "^6.7.1",
+    "eslint": "^8.15.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.26.0",
     "express": "^4.18.1",
     "html-webpack-plugin": "^5.5.0",
     "style-loader": "^3.3.1",
