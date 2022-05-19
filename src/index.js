@@ -1,6 +1,6 @@
 import style from './style.css';
-import domLoader from './domLoader';
 import getEventListeners from './getEventListeners';
+import domLoader from './domLoader';
 
 domLoader();
 getEventListeners();

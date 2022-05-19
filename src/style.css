@@ -8,10 +8,14 @@ body {
   flex: 1;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgb(235, 233, 233);
 }
 .outerContainer {
-  border: 10px ridge rgb(49, 176, 230);
-  flex: 1;
+  border: 4px ridge rgb(49, 176, 230);
+  width: 80%;
+  height: 80%;
 }
 .previous,
 .next {
@@ -31,6 +35,14 @@ body {
   right: 0;
   top: 45%;
 }
+.innerContainer {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  overflow: hidden;
+}
+
+/* animations */
 .previous:hover,
 .next:hover {
   transform: scale(1.1);
