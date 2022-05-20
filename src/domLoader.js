@@ -1,7 +1,7 @@
 import leftSvg from './img/chevron-left.svg';
 import rightSvg from './img/chevron-right.svg';
 
-const domLoader = (img) => {
+const domLoader = () => {
   const body = document.querySelector('body');
 
   const container = document.createElement('main');
@@ -11,7 +11,6 @@ const domLoader = (img) => {
   outerContainer.setAttribute('class', 'outerContainer');
 
   const innerContainer = new Image();
-  innerContainer.src = img;
   innerContainer.setAttribute('class', 'innerContainer');
 
   const previousArrow = document.createElement('svg');

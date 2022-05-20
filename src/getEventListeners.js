@@ -1,19 +1,28 @@
-import img1 from './img/pexels-ensiha-digital-3701637.jpg';
-import img2 from './img/pexels-eriks-abzinovs-3117170.jpg';
+import imgDatabase from './imgDatabase';
+import imgUpdater from './imgUpdater';
 
 const getEventListeners = () => {
-  const innerContainer = document.querySelector('.innerContainer');
-
   const previous = document.querySelector('.previous');
   const next = document.querySelector('.next');
 
-  previous.addEventListener('click', () => console.log('hi'));
-  next.addEventListener('click', () => console.log('hi2'));
+  let currentImg = 0;
 
-  const imgs = [img1, img2];
+  // listens for clicks, manipulate counter to iterate through array,
+  // updates img
 
-  const nextImg = imgs[1];
-  innerContainer.src = nextImg;
+  previous.addEventListener('click', () => {
+    if (currentImg === 0) return;
+    currentImg -= 1;
+    const imgToShow = imgDatabase[currentImg];
+    imgUpdater(imgToShow);
+  });
+
+  next.addEventListener('click', () => {
+    if (currentImg === 13) return;
+    currentImg += 1;
+    const imgToShow = imgDatabase[currentImg];
+    imgUpdater(imgToShow);
+  });
 };
 
 export default getEventListeners;
