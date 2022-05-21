@@ -1,5 +1,6 @@
 import leftSvg from './img/chevron-left.svg';
 import rightSvg from './img/chevron-right.svg';
+import imgDatabase from './imgDatabase';
 
 const domLoader = () => {
   const body = document.querySelector('body');
@@ -12,6 +13,9 @@ const domLoader = () => {
 
   const innerContainer = new Image();
   innerContainer.setAttribute('class', 'innerContainer');
+  // first time loading
+  const imgToShow = imgDatabase[0];
+  innerContainer.src = imgToShow;
 
   const previousArrow = document.createElement('svg');
   previousArrow.setAttribute('role', 'img');

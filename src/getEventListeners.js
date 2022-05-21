@@ -11,17 +11,25 @@ const getEventListeners = () => {
   // updates img
 
   previous.addEventListener('click', () => {
-    if (currentImg === 0) return;
-    currentImg -= 1;
-    const imgToShow = imgDatabase[currentImg];
-    imgUpdater(imgToShow);
+    if (currentImg === 0) {
+      const imgToShow = imgDatabase[0];
+      imgUpdater(imgToShow);
+    } else {
+      currentImg -= 1;
+      const imgToShow = imgDatabase[currentImg];
+      imgUpdater(imgToShow);
+    }
   });
 
   next.addEventListener('click', () => {
-    if (currentImg === 13) return;
-    currentImg += 1;
-    const imgToShow = imgDatabase[currentImg];
-    imgUpdater(imgToShow);
+    if (currentImg === 12) {
+      const imgToShow = imgDatabase[12];
+      imgUpdater(imgToShow);
+    } else {
+      currentImg += 1;
+      const imgToShow = imgDatabase[currentImg];
+      imgUpdater(imgToShow);
+    }
   });
 };
 

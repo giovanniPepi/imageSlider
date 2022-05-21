@@ -14,8 +14,8 @@ body {
 }
 .outerContainer {
   border: 4px ridge rgb(49, 176, 230);
-  width: 80%;
-  height: 80%;
+  width: 600px;
+  height: 320px;
 }
 .previous,
 .next {
